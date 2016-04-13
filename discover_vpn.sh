@@ -1,8 +1,8 @@
 #!/bin/bash
 
-path=/etc/openvpn/ccd # path to certificate dir
+path=/etc/openvpn/ccd # path to certificate directory
 
-users=`ls -F $path | sed 's/\///g'`
+users=`ls -F $path | sed 's/\///g'` # array of certificate name
 
 echo "{"
 echo "\"data\":["
