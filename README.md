@@ -1,4 +1,7 @@
-# zabbix-openvpn
+# zabbix-openvpn EN
+
+
+# zabbix-openvpn RUS
 Для Zabbix 3.0
 
 Скрипт мониторинга пользователей OpenVPN.
