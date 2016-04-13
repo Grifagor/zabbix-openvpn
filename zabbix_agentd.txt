@@ -1,5 +1,5 @@
 UserParameter=discovery.openvpn,/etc/zabbix/scripts/discover_vpn.sh
-UserParameter=status.openvpn[*], cat /var/log/openvpn-status.log | grep -x $1 >/dev/null && echo 1 || echo 0
+UserParameter=user_status.openvpn[*], cat /var/log/openvpn-status.log | grep -x $1 >/dev/null && echo 1 || echo 0
 UserParameter=num_user.openvpn, cat /var/log/openvpn-status.log | sed -n '/Connected Since/,/ROUTING/p' | sed -e '1d' -e '$d' | wc -l
 UserParameter=user_byte_received.openvpn[*], cat /var/log/openvpn-status.log | grep -x $1 | tr "," "\n" | sed -n '3p'
 UserParameter=user_byte_sent.openvpn[*], cat /var/log/openvpn-status.log | grep -x $1 | tr "," "\n" | sed -n '4p'
