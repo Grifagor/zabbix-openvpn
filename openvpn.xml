@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-04-12T15:13:40Z</date>
+    <date>2016-08-17T11:07:00Z</date>
     <groups>
         <group>
-            <name>_SET_Templates</name>
+            <name>Templates</name>
         </group>
     </groups>
     <templates>
         <template>
-            <template>OpenVPN</template>
-            <name>OpenVPN</name>
+            <template>Template App OpenVPN</template>
+            <name>Template App OpenVPN</name>
             <description/>
             <groups>
                 <group>
-                    <name>_SET_Templates</name>
+                    <name>Templates</name>
                 </group>
             </groups>
             <applications>
                 <application>
-                    <name>status</name>
+                    <name>OpenVPN</name>
                 </application>
             </applications>
             <items>
                 <item>
-                    <name>num_user</name>
+                    <name>openvpn num_user</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
@@ -58,14 +58,18 @@
                     <port/>
                     <description/>
                     <inventory_link>0</inventory_link>
-                    <applications/>
+                    <applications>
+                        <application>
+                            <name>OpenVPN</name>
+                        </application>
+                    </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>vpn_user</name>
+                    <name>openvpn vpn_user</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -98,7 +102,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>byte_received {#VPNUSER}</name>
+                            <name>openvpn byte_received {#VPNUSER}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -134,7 +138,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>status</name>
+                                    <name>OpenVPN</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -142,7 +146,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>byte_sent {#VPNUSER}</name>
+                            <name>openvpn byte_sent {#VPNUSER}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -178,7 +182,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>status</name>
+                                    <name>OpenVPN</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -186,7 +190,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>user_status openvpn {#VPNUSER}</name>
+                            <name>openvpn user_status openvpn {#VPNUSER}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -222,7 +226,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>status</name>
+                                    <name>OpenVPN</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -233,7 +237,7 @@
                     <trigger_prototypes/>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>byte_sent/received {#VPNUSER}</name>
+                            <name>openvpn byte_sent/received {#VPNUSER}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -258,7 +262,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>OpenVPN</host>
+                                        <host>Template App OpenVPN</host>
                                         <key>user_byte_received.openvpn[{#VPNUSER}]</key>
                                     </item>
                                 </graph_item>
@@ -270,14 +274,14 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>OpenVPN</host>
+                                        <host>Template App OpenVPN</host>
                                         <key>user_byte_sent.openvpn[{#VPNUSER}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>status openvpn {#VPNUSER}</name>
+                            <name>OpenVPN Status {#VPNUSER}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -302,7 +306,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>OpenVPN</host>
+                                        <host>Template App OpenVPN</host>
                                         <key>user_status.openvpn[{#VPNUSER}]</key>
                                     </item>
                                 </graph_item>
@@ -337,7 +341,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <key>num_user.openvpn</key>
-                                <host>OpenVPN</host>
+                                <host>Template App OpenVPN</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -358,8 +362,8 @@
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <name>status openvpn {#VPNUSER}</name>
-                                <host>OpenVPN</host>
+                                <name>OpenVPN Status {#VPNUSER}</name>
+                                <host>Template App OpenVPN</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
