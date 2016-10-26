@@ -4,7 +4,7 @@
     <date>2016-04-12T15:13:40Z</date>
     <groups>
         <group>
-            <name>_SET_Templates</name>
+            <name>Templates</name>
         </group>
     </groups>
     <templates>
@@ -14,7 +14,7 @@
             <description/>
             <groups>
                 <group>
-                    <name>_SET_Templates</name>
+                    <name>Templates</name>
                 </group>
             </groups>
             <applications>
