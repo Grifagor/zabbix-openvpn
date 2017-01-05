@@ -1,8 +1,8 @@
 #!/bin/bash
 
-path=/etc/openvpn/ccd # path to certificate directory
+path=/var/log/openvpn/openvpn-status.log # path to openvpn status log
 
-users=`ls -F $path | sed 's/\///g'` # array of certificate name
+users=`sed '/ROUTING TABLE/,$d' $path| sed 's/,.*//'| sed 1,3d` # array of certificate name
 
 echo "{"
 echo "\"data\":["

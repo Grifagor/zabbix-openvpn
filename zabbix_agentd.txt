@@ -3,5 +3,3 @@ UserParameter=user_status.openvpn[*], cat /var/log/openvpn-status.log | grep $1,
 UserParameter=num_user.openvpn, cat /var/log/openvpn-status.log | sed -n '/Connected Since/,/ROUTING/p' | sed -e '1d' -e '$d' | wc -l
 UserParameter=user_byte_received.openvpn[*], if [ "`grep -c $1, /var/log/openvpn-status.log`" != "0" ]; then cat /var/log/openvpn-status.log | grep $1, | tr "," "\n" | sed -n '3p' ; else echo "0" ; fi
 UserParameter=user_byte_sent.openvpn[*], if [ "`grep -c $1, /var/log/openvpn-status.log`" != "0" ]; then cat /var/log/openvpn-status.log | grep $1, | tr "," "\n" | sed -n '4p' ; else echo "0" ; fi
-
-UserParameter=discovery.openvpn.ipp,/etc/zabbix/scripts/discover_vpn_ipp.sh # for discovery with ifconfig-pool-persist
