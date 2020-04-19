@@ -1,5 +1,9 @@
-# zabbix-openvpn 
-Zabbix 3.0
+# zabbix-openvpn fork
+Tested on Zabbix 4.4.1
+
+Main changes:
+1)	Change so that the discovery is through the file openvpn-status.log
+2)	Change to show data in bits instead of bytes
 
 Script for OpenVPN users monitoring.
 It shows an OpenVPN user’s status, and its uplink and downlink traffic.
